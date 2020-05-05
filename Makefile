@@ -1,6 +1,6 @@
 .PHONY: build dist
 
-PLATFORMS = linux/amd64,linux/arm/v7
+PLATFORMS = linux/amd64,linux/arm/v7,linux/arm64
 TAG = $(DOCKER_REGISTRY)rhasspy/julius:4.5
 
 all: build

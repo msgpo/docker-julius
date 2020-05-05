@@ -1,4 +1,4 @@
-FROM ubuntu:eoan
+FROM ubuntu:bionic
 
 ARG MAKE_THREADS=8
 
@@ -8,7 +8,7 @@ RUN apt-get update && \
 
 ADD download/julius-2019.tar.gz /
 RUN cd /julius-master && \
-    ./configure --prefix=/output && \
+    ./configure --prefix=/output --enable-words-int && \
     make -j $MAKE_THREADS  && \
     make install
 
